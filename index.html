@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Kingdom Journey — An Nguyen</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-inner">
+    <div class="nav-logo" onclick="showPage('home')" style="cursor:pointer">Kingdom <span>Journey</span></div>
+    <div class="nav-links">
+      <a onclick="showPage('home')">Home</a>
+      <a onclick="showPage('about')">About</a>
+      <a onclick="showPage('projects')">Projects</a>
+      <a onclick="showPage('updates')">Updates</a>
+      <a onclick="showPage('contact')">Contact</a>
+      <a onclick="showPage('support')" class="nav-cta">Support</a>
+    </div>
+    <button class="nav-hamburger" onclick="toggleMenu()" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+  <div class="mobile-menu" id="mobileMenu">
+    <a onclick="showPage('home');toggleMenu()">Home</a>
+    <a onclick="showPage('about');toggleMenu()">About</a>
+    <a onclick="showPage('projects');toggleMenu()">Projects</a>
+    <a onclick="showPage('updates');toggleMenu()">Updates</a>
+    <a onclick="showPage('contact');toggleMenu()">Contact</a>
+    <a onclick="showPage('support');toggleMenu()">Support</a>
+  </div>
+</nav>
+
+<!-- ═══════════════════════════════════════════════════════
+     HOME PAGE
+═══════════════════════════════════════════════════════ -->
+<div id="page-home" class="page active">
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="hero-texture"></div>
+    <div class="hero-inner">
+      <div>
+        <div class="hero-eyebrow">Kingdom Journey · An Nguyen</div>
+        <h1 class="hero-title">
+          One journey.<br>
+          One purpose.<br>
+          <em>Follow Jesus — to every tribe, tongue, and nation.</em>
+        </h1>
+        <div class="hero-verse">
+          "After this I looked, and there before me was a great multitude that no one could count, from every nation, tribe, people and language, standing before the throne."
+          <br>— Revelation 7:9
+        </div>
+        <div class="hero-btns">
+          <button class="btn-primary" onclick="showPage('updates')">Read our updates</button>
+          <button class="btn-outline" onclick="showPage('support')">Support the mission</button>
+        </div>
+      </div>
+      <div class="hero-image-wrap">
+        <img src="an_photo.jpeg" alt="An Nguyen on mission" class="hero-photo" onerror="this.style.display='none'; document.getElementById('hero-placeholder').style.display='flex'"/>
+        <div id="hero-placeholder" class="hero-photo-placeholder" style="display:none">
+          <span style="font-size:36px">🌏</span>
+          <span>An Nguyen<br>Kingdom Journey</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- What We Do -->
+  <section class="section section-white">
+    <div class="section-inner">
+      <div class="section-eyebrow">What we do</div>
+      <h2 class="section-title">Building His Kingdom — <br>one life at a time</h2>
+      <p class="section-subtitle">Kingdom Journey is a calling to walk with God through every chapter of life, every city and village, every nation and people group. The mission never changes.</p>
+      <div class="what-grid">
+        <div class="what-card">
+          <div class="what-icon">🙏</div>
+          <h3>Discipleship</h3>
+          <p>Walking alongside students and young people, pouring into their lives with the Word of God, building faith that goes beyond the classroom.</p>
+        </div>
+        <div class="what-card">
+          <div class="what-icon">🔨</div>
+          <h3>Construction Ministry</h3>
+          <p>Using hands-on construction work as a tool for discipleship — teaching life skills, building character, and sharing Jesus through real work and relationship.</p>
+        </div>
+        <div class="what-card">
+          <div class="what-icon">🌍</div>
+          <h3>Missions</h3>
+          <p>Eight years of overseas mission experience, with a vision to reach every unreached people group. The nations are always on our heart.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Latest Update -->
+  <section class="section section-cream">
+    <div class="section-inner">
+      <div class="section-eyebrow">Latest update</div>
+      <h2 class="section-title">From the field</h2>
+      <div class="update-card">
+        <div>
+          <div class="update-date">June 2026</div>
+          <div class="update-title">Kingdom Journey is launching — here's what God has been doing</div>
+          <p class="update-excerpt">
+            This is the beginning of something I've carried in my heart for a long time. Kingdom Journey is now a place where you can follow along as God leads me through each chapter — from construction discipleship in San Antonio, to wherever He calls next. Thank you for being part of this journey.
+          </p>
+          <div class="update-link" onclick="showPage('updates')">Read full update →</div>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:10px;min-width:140px;padding-top:4px">
+          <div style="background:var(--cream);border-radius:6px;padding:14px;text-align:center;border:1px solid var(--border)">
+            <div style="font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:0.07em;margin-bottom:4px">Location</div>
+            <div style="font-size:14px;font-weight:600;color:var(--earth)">San Antonio, TX</div>
+          </div>
+          <div style="background:var(--cream);border-radius:6px;padding:14px;text-align:center;border:1px solid var(--border)">
+            <div style="font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:0.07em;margin-bottom:4px">Partner</div>
+            <div style="font-size:14px;font-weight:600;color:var(--earth)">Agora Ministries</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects Preview -->
+  <section class="section section-white">
+    <div class="section-inner">
+      <div class="section-eyebrow">Active projects</div>
+      <h2 class="section-title">What we're building right now</h2>
+      <div class="projects-grid">
+        <div class="project-card">
+          <div class="project-img">🏗️</div>
+          <div class="project-body">
+            <div class="project-tag">Active · San Antonio</div>
+            <h3>Construction Discipleship Program</h3>
+            <p>Working with inner-city students on the west side — teaching construction skills, life skills, and the Gospel side by side.</p>
+          </div>
+        </div>
+        <div class="project-card">
+          <div class="project-img">📖</div>
+          <div class="project-body">
+            <div class="project-tag">Active · Weekly</div>
+            <h3>Student Bible Study & Mentorship</h3>
+            <p>Weekly Bible study and one-on-one mentorship with students — many of whom are encountering Jesus for the first time.</p>
+          </div>
+        </div>
+        <div class="project-card">
+          <div class="project-img">✈️</div>
+          <div class="project-body">
+            <div class="project-tag">Planning · Future</div>
+            <h3>Overseas Missions</h3>
+            <p>Continuing the call to unreached nations — the next chapter of Kingdom Journey is taking shape. Pray with us.</p>
+          </div>
+        </div>
+      </div>
+      <div style="margin-top:32px">
+        <button class="btn-primary" onclick="showPage('projects')">See all projects</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Support CTA -->
+  <div class="cta-band">
+    <h2>Partner with Kingdom Journey</h2>
+    <p>Your support sends students into the field and builds more than structures — it builds lives, faith, and the Kingdom of God.</p>
+    <button class="btn-primary" onclick="showPage('support')">Give to Kingdom Journey</button>
+  </div>
+
+  <!-- Newsletter -->
+  <section class="section section-white">
+    <div class="section-inner">
+      <div class="newsletter-wrap">
+        <div>
+          <h3>Stay on the journey with us</h3>
+          <p>Get monthly updates from the field — stories, prayer requests, and what God is doing through Kingdom Journey. No spam, ever.</p>
+        </div>
+        <div class="newsletter-form">
+          <input type="text" placeholder="Your name" />
+          <input type="email" placeholder="Your email address" />
+          <button class="btn-primary" onclick="alert('Newsletter coming soon! Email An at an@agoraministries.com to be added to the list.')">Subscribe to updates</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</div>
+
+<!-- ═══════════════════════════════════════════════════════
+     ABOUT PAGE
+═══════════════════════════════════════════════════════ -->
+<div id="page-about" class="page">
+
+  <section class="about-hero">
+    <div class="about-hero-inner">
+      <div>
+        <div class="hero-eyebrow" style="color:var(--gold);font-size:12px;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;margin-bottom:20px">My story</div>
+        <h1>A journey that started <em>in the dark</em> — and never looked back.</h1>
+        <p style="margin-top:20px">From Ho Chi Minh City to America, from hopelessness to a calling that spans the nations — this is Kingdom Journey.</p>
+      </div>
+      <div style="display:flex;justify-content:center">
+        <img src="an_photo.jpeg" alt="An Nguyen" class="about-photo" onerror="this.style.background='rgba(255,255,255,0.1)';this.style.display='flex'"/>
+      </div>
+    </div>
+  </section>
+
+  <section class="story-section">
+    <div class="story-inner">
+
+      <div class="story-chapter">
+        <div class="chapter-label">Chapter 1 · Vietnam</div>
+        <h2>Growing up without a father</h2>
+        <p>I grew up in Ho Chi Minh City, Vietnam — raised not by my parents, but by my grandparents. My father left before I was born. My mother had to travel and work constantly just to provide for our family. For most of my childhood, I carried a weight I couldn't name: deep anger, jealousy, and a feeling of being unworthy.</p>
+        <p>I never saw a Bible. I never heard the name of Jesus. We lived according to Buddhism and karma, and I believed my suffering was punishment from a past life. At one of my lowest points, I even considered taking my own life — convinced that maybe a next life would be better than this one.</p>
+        <p>But something — someone — stopped me every time.</p>
+        <div class="pull-quote">"I always had this question: is something wrong with me? Why doesn't anyone want me?"</div>
+      </div>
+
+      <div class="story-chapter">
+        <div class="chapter-label">Chapter 2 · America</div>
+        <h2>A new country, but the same emptiness</h2>
+        <p>At twenty-one, I moved to America. I thought a new country would mean a new life — the American dream, freedom, a fresh start. But the anger came with me. The emptiness was still there. I had no hope, no dream, no vision for my future.</p>
+        <p>One day, I was so overwhelmed with anger that I said something cruel to my mother and made her cry. That moment broke something open in me. I had to ask: <em>What is the purpose of my life? Is this all I'm meant to do?</em></p>
+        <p>Then I met a group of Christians in college. They kept showing up, kept loving me, kept inviting me in. Eventually I asked them: "Why do you care about me? My family doesn't even love me. Why do you?" Their answer changed everything.</p>
+        <div class="pull-quote">"The reason we love you, An, is because God loves you and God cares for you."</div>
+        <p>That was the first time I experienced the love of God through another person.</p>
+      </div>
+
+      <div class="story-chapter">
+        <div class="chapter-label">Chapter 3 · Encounter</div>
+        <h2>The night God became real</h2>
+        <p>A year or two later, my car broke down on a dark highway late at night. I was alone, waiting for help, and I prayed the most honest prayer of my life:</p>
+        <div class="pull-quote">"God, if you are real — show me. I'm tired of chasing something I can't see or touch. I don't want to be lied to or used again. If you're real, prove it."</div>
+        <p>In that moment, God gave me two visions. One showed my life before Jesus — full of darkness, brokenness, and sorrow. The other showed my life after Jesus — full of hope, joy, and dreams. Then God asked me a simple question: <em>Which life do you want to live?</em></p>
+        <p>I chose hope. I chose Jesus. I accepted Him that night, got baptized, and started reading the Bible. For the first time in my life, things became clear.</p>
+      </div>
+
+      <div class="story-chapter">
+        <div class="chapter-label">Chapter 4 · Calling</div>
+        <h2>The nations were always the destination</h2>
+        <p>As I studied Scripture in a small group, I began to understand God's heart for the lost — for people like me who had never heard the Gospel. I took mission trips to different nations and saw something that broke my heart: millions of people have no access to the Bible. Millions have never heard the name of Jesus.</p>
+        <p>Then I read John 1:12 — that to all who believed and received Him, He gave the right to become children of God. That verse became the foundation of everything.</p>
+        <div class="pull-quote">"I don't have an earthly father. But I have a Father in heaven — and He has given me something too precious to keep only for myself."</div>
+        <p>I spent five years leading college ministry at Texas A&M Kingsville — running Bible studies, discipling students, and leading mission trips. Over eight years, I took overseas mission trips annually, spending 2–4 weeks each year in different nations alongside missionaries. The burden for unreached people groups only grew stronger.</p>
+      </div>
+
+      <div class="story-chapter">
+        <div class="chapter-label">Chapter 5 · Now</div>
+        <h2>Construction, discipleship, and forgotten students</h2>
+        <p>In 2025, I sensed God calling me into a new season. I had known Agora Ministries for nearly a decade — I'd taken mission trips with them, built friendships, and seen their heart for the city. When I prayed, their name kept coming to mind.</p>
+        <p>I made the call. I got the interview. I joined the team.</p>
+        <p>When I arrived, I asked God: <em>What is my purpose here?</em> The answer was clear: be a helper for this season. So I asked the director: "What do you need most right now?" He told me about the students on the west side of San Antonio — young people with over an 80% high school dropout rate, growing up in poverty, dealing with family trauma from addiction and loss. Students who had never had anyone pour into them.</p>
+        <p>That's where construction discipleship comes in. We don't just teach building skills — we teach students how to live, how to lead, and who Jesus is. Many of our students are Middle Eastern youth who are encountering the Gospel for the first time. We show them what it looks like to follow Jesus in real life, through real work, in real relationship.</p>
+      </div>
+
+      <div class="story-chapter" style="border-bottom:none;margin-bottom:0;padding-bottom:0">
+        <div class="chapter-label">The vision</div>
+        <h2>Kingdom Journey — this is just the beginning</h2>
+        <p>What I'm doing with Agora is one chapter. My calling is bigger. My vision is to walk with Jesus across every nation, every city, every village, every people group — to build His kingdom through every conversation, every contact, every student, every dream He places on my heart.</p>
+        <p>I don't know all the details of where God will lead me next. I may move to a different country. I may work with different organizations. But the mission stays the same.</p>
+        <div class="pull-quote">"Follow Jesus in every step. Bring the Gospel to every tribe, tongue, and language. Build His Kingdom — one life at a time."</div>
+        <p>This is Kingdom Journey. And you're invited to walk with us.</p>
+        <div style="margin-top:32px;display:flex;gap:14px;flex-wrap:wrap">
+          <button class="btn-primary" onclick="showPage('support')">Partner with us</button>
+          <button class="btn-outline" style="border-color:var(--border);color:var(--earth);padding:13px 28px;border-radius:6px;font-size:15px;background:transparent;cursor:pointer" onclick="showPage('contact')">Get in touch</button>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+</div>
+
+<!-- ═══════════════════════════════════════════════════════
+     PROJECTS PAGE
+═══════════════════════════════════════════════════════ -->
+<div id="page-projects" class="page">
+  <section class="section section-white" style="padding-top:80px">
+    <div class="section-inner">
+      <div class="section-eyebrow">What we're building</div>
+      <h2 class="section-title">Active projects & vision</h2>
+      <p class="section-subtitle">Every project is a chapter in the same story — making disciples, building lives, and advancing the Kingdom of God wherever He leads.</p>
+
+      <div class="projects-page-grid">
+        <div class="project-full-card">
+          <div class="project-full-img">🏗️</div>
+          <div class="project-full-body">
+            <span class="project-status status-active">Active</span>
+            <h3>Construction Discipleship Program</h3>
+            <p>Partnering with Agora Ministries in San Antonio, TX, we work with inner-city students on the west side who face significant barriers — poverty, family trauma, and a high dropout rate. Through hands-on construction training, we create a pathway for these students to learn life skills, develop character, and encounter Jesus in a real way.</p>
+            <p style="margin-top:12px">This is discipleship with dirt on your hands — and it's changing lives.</p>
+          </div>
+        </div>
+
+        <div class="project-full-card">
+          <div class="project-full-img">📖</div>
+          <div class="project-full-body">
+            <span class="project-status status-active">Active</span>
+            <h3>Student Mentorship & Bible Study</h3>
+            <p>Weekly Bible study and one-on-one mentorship with students in our construction program. Many are Middle Eastern youth encountering the Gospel for the first time. We walk with them through Scripture, answer their hard questions, and show them what it looks like to follow Jesus in everyday life.</p>
+          </div>
+        </div>
+
+        <div class="project-full-card">
+          <div class="project-full-img">🌏</div>
+          <div class="project-full-body">
+            <span class="project-status status-planning">In Prayer</span>
+            <h3>Overseas Missions — Next Chapter</h3>
+            <p>For eight years, I've taken annual mission trips overseas — spending 2–4 weeks each year in different nations alongside missionaries. The call to unreached people groups has never left my heart. The next major chapter of Kingdom Journey is taking shape — through prayer, preparation, and trust in God's timing.</p>
+            <p style="margin-top:12px">Pray with us that God makes the path clear.</p>
+          </div>
+        </div>
+
+        <div class="project-full-card">
+          <div class="project-full-img">🤝</div>
+          <div class="project-full-body">
+            <span class="project-status status-planning">Growing</span>
+            <h3>Supporter & Prayer Network</h3>
+            <p>Every missionary needs a team behind them. We're building a network of people who pray, give, and stay connected to what God is doing through Kingdom Journey. This website is the beginning of that — a place where our community can follow the journey and be part of the mission.</p>
+            <p style="margin-top:12px">You're already part of this by being here.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="cta-band">
+    <h2>Want to be part of what God is building?</h2>
+    <p>Your prayers and support directly fuel the work in San Antonio and beyond.</p>
+    <button class="btn-primary" onclick="showPage('support')">Partner with Kingdom Journey</button>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════════
+     UPDATES PAGE
+═══════════════════════════════════════════════════════ -->
+<div id="page-updates" class="page">
+  <section class="section section-white" style="padding-top:80px">
+    <div class="section-inner">
+      <div class="section-eyebrow">Monthly updates</div>
+      <h2 class="section-title">From the field</h2>
+      <p class="section-subtitle">Every month, a new chapter. Follow along as God leads Kingdom Journey through each season — stories from construction sites, from Bible studies, from mission trips, and from life on the journey.</p>
+
+      <div class="updates-list">
+        <div class="update-row">
+          <div class="update-month">
+            <div class="update-month-name">Jun</div>
+            <div class="update-month-year">2026</div>
+          </div>
+          <div>
+            <h3>Kingdom Journey is launching — here's what God has been doing</h3>
+            <p>This is the beginning of something I've carried in my heart for a long time. Kingdom Journey is now a place where you can follow along as God leads me through each chapter. From construction discipleship in San Antonio with Agora Ministries, to wherever He calls next — I want you on this journey with me. Thank you for being here from the very start.</p>
+            <div class="update-link" style="margin-top:14px;cursor:default;color:var(--muted)">Full post coming soon</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="empty-state" style="margin-top:48px;background:var(--cream);border-radius:8px;padding:48px">
+        <h3>More updates on the way</h3>
+        <p style="color:var(--muted);max-width:400px;margin:0 auto 24px">An posts monthly updates from the field. Subscribe below so you never miss one.</p>
+        <div style="display:flex;gap:12px;max-width:400px;margin:0 auto;flex-wrap:wrap">
+          <input type="email" placeholder="Your email address" style="flex:1;padding:12px 16px;border:1.5px solid var(--border);border-radius:6px;font-size:14px;font-family:var(--font-body);outline:none;min-width:200px"/>
+          <button class="btn-primary" onclick="alert('Newsletter coming soon! Email An at an@agoraministries.com to be added to the list.')">Subscribe</button>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- ═══════════════════════════════════════════════════════
+     SUPPORT PAGE
+═══════════════════════════════════════════════════════ -->
+<div id="page-support" class="page">
+
+  <section class="support-hero">
+    <div style="max-width:var(--max);margin:0 auto">
+      <div class="hero-eyebrow" style="color:var(--gold);font-size:12px;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;margin-bottom:20px;text-align:center">Partner with us</div>
+      <h1>Every gift is a step<br>in the journey</h1>
+      <p style="margin-top:16px">Kingdom Journey runs on prayer, relationship, and the generosity of people who believe in what God is doing. There are three ways you can partner with us.</p>
+    </div>
+  </section>
+
+  <section class="section section-white">
+    <div class="section-inner">
+      <div class="support-ways">
+        <div class="support-card">
+          <div class="support-icon">💸</div>
+          <h3>Give Financially</h3>
+          <p>Your financial gift supports An's ministry — covering travel, discipleship materials, and the day-to-day work of reaching students and nations.</p>
+          <button class="btn-primary" onclick="document.getElementById('donate-section').scrollIntoView({behavior:'smooth'})">Give now</button>
+        </div>
+        <div class="support-card">
+          <div class="support-icon">🙏</div>
+          <h3>Pray With Us</h3>
+          <p>Prayer is the foundation of everything. Sign up for our monthly updates and pray for the students, mission trips, and doors God is opening.</p>
+          <button class="btn-primary" onclick="showPage('updates')">Get prayer updates</button>
+        </div>
+        <div class="support-card">
+          <div class="support-icon">📢</div>
+          <h3>Spread the Word</h3>
+          <p>Share Kingdom Journey with your church, your small group, or anyone who has a heart for missions and discipleship. Every connection matters.</p>
+          <button class="btn-primary" onclick="navigator.share ? navigator.share({title:'Kingdom Journey',url:window.location.href}) : alert('Share this page: ' + window.location.href)">Share this page</button>
+        </div>
+      </div>
+
+      <div class="donate-box" id="donate-section">
+        <h3>Give through Assemblies of God</h3>
+        <p>Kingdom Journey is supported through the Assemblies of God giving platform — a secure, trusted system for ministry donations.</p>
+        <div class="donate-instructions">
+          <strong>How to give:</strong><br>
+          1. Click the button below to open the AG giving page<br>
+          2. Search for <strong>An Nguyen</strong> or enter account number <strong>2903912</strong><br>
+          3. Choose your gift amount — one-time or monthly<br>
+          4. Your gift goes directly to support Kingdom Journey
+        </div>
+        <a href="https://giving.ag.org/donate" target="_blank" rel="noopener noreferrer">
+          <button class="btn-primary" style="font-size:16px;padding:15px 36px">Give to Kingdom Journey →</button>
+        </a>
+        <p style="margin-top:16px;font-size:13px;color:var(--muted)">All gifts are tax-deductible through the Assemblies of God.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-cream">
+    <div class="section-inner" style="text-align:center">
+      <div class="section-eyebrow">A word from An</div>
+      <div style="max-width:640px;margin:0 auto">
+        <div class="pull-quote" style="font-size:18px;border-left:3px solid var(--gold);padding:20px 28px;background:var(--white);border-radius:0 8px 8px 0;text-align:left">
+          "The Lord called me to ministry and I know that to walk with Him is like a journey. Every chapter is different, but the mission is still the same — to bring the Gospel to every tribe, tongue, and language. Your partnership makes each step of this journey possible. Thank you."
+        </div>
+        <p style="margin-top:16px;font-size:15px;color:var(--muted)">— An Nguyen, Kingdom Journey</p>
+      </div>
+    </div>
+  </section>
+
+</div>
+
+<!-- ═══════════════════════════════════════════════════════
+     CONTACT PAGE
+═══════════════════════════════════════════════════════ -->
+<div id="page-contact" class="page">
+  <section class="section section-white" style="padding-top:80px">
+    <div class="section-inner">
+      <div class="section-eyebrow">Get in touch</div>
+      <h2 class="section-title">Let's connect</h2>
+      <p class="section-subtitle">Whether you want to pray together, partner with Kingdom Journey, ask questions, or just say hello — I'd love to hear from you.</p>
+
+      <div class="contact-grid">
+        <div class="contact-info">
+          <h3>Reach An directly</h3>
+          <p>I personally read every message. Don't hesitate to reach out — whether you're a supporter, a church leader, or someone who just found this page and wants to know more.</p>
+
+          <div class="contact-item">
+            <div class="contact-item-icon">✉️</div>
+            <div>
+              <div class="contact-item-label">Email</div>
+              <div class="contact-item-value">an@agoraministries.com</div>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-item-icon">📍</div>
+            <div>
+              <div class="contact-item-label">Currently serving in</div>
+              <div class="contact-item-value">San Antonio, TX</div>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-item-icon">🤝</div>
+            <div>
+              <div class="contact-item-label">Ministry partner</div>
+              <div class="contact-item-value">Agora Ministries</div>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-item-icon">🌐</div>
+            <div>
+              <div class="contact-item-label">Denomination</div>
+              <div class="contact-item-value">Assemblies of God</div>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <div class="contact-form">
+            <div class="form-group">
+              <label class="form-label">Your name</label>
+              <input type="text" placeholder="John Smith" id="contact-name"/>
+            </div>
+            <div class="form-group">
+              <label class="form-label">Your email</label>
+              <input type="email" placeholder="john@example.com" id="contact-email"/>
+            </div>
+            <div class="form-group">
+              <label class="form-label">How can I help?</label>
+              <textarea placeholder="I'd like to pray for your ministry / I have a question about Kingdom Journey / I'm interested in supporting..." id="contact-message"></textarea>
+            </div>
+            <button class="btn-primary" onclick="sendContactEmail()">Send message</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <h3>Kingdom Journey</h3>
+      <p>One journey. One purpose.<br>Follow Jesus — to every tribe, tongue, and nation.</p>
+    </div>
+    <div class="footer-nav">
+      <h4>Navigate</h4>
+      <a onclick="showPage('home')">Home</a>
+      <a onclick="showPage('about')">About An</a>
+      <a onclick="showPage('projects')">Projects</a>
+      <a onclick="showPage('updates')">Updates</a>
+      <a onclick="showPage('support')">Support</a>
+      <a onclick="showPage('contact')">Contact</a>
+    </div>
+    <div class="footer-nav">
+      <h4>Connect</h4>
+      <a href="mailto:an@agoraministries.com">an@agoraministries.com</a>
+      <a href="https://agoraministries.com" target="_blank" rel="noopener">Agora Ministries</a>
+      <a href="https://giving.ag.org/donate" target="_blank" rel="noopener">Give to Kingdom Journey</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2026 Kingdom Journey · An Nguyen</span>
+    <span>Assemblies of God Minister · San Antonio, TX</span>
+  </div>
+</footer>
+<script src="script.js" defer></script>
+
+</body>
+</html>
