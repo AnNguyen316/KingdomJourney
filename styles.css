@@ -45,7 +45,8 @@
       font-size: 14px; font-weight: 500; color: var(--muted);
       transition: color 0.2s;
     }
-    .nav-links a:hover { color: var(--earth); }
+    .nav-links a:hover,
+    .nav-links a.active { color: var(--earth); }
     .nav-cta {
       background: var(--gold); color: var(--white) !important;
       padding: 8px 18px; border-radius: var(--radius);
@@ -516,6 +517,7 @@
         font-size: 16px; font-weight: 500; color: var(--earth);
         padding: 8px 0; border-bottom: 1px solid var(--border);
       }
+      .mobile-menu a.active { color: var(--gold); }
       .hero-inner, .about-hero-inner { grid-template-columns: 1fr; }
       .hero-image-wrap { display: none; }
       .what-grid, .projects-grid, .support-ways { grid-template-columns: 1fr; }
